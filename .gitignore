@@ -1,0 +1,21 @@
+/Demo.WindowsForms/obj
+/Demo.WindowsForms/bin
+/Demo.WindowsPresentation/bin
+/Demo.WindowsPresentation/obj
+/GMap.NET.Core/bin
+/GMap.NET.Core/obj
+/GMap.NET.WindowsForms/bin
+/GMap.NET.WindowsForms/obj
+/GMap.NET.WindowsPresentation/bin
+/GMap.NET.WindowsPresentation/obj
+/Setup/GMap.NET - Hot Build/obj
+/Testing/BigMapMaker/obj/Debug
+/Testing/BingWpfFusion/obj
+/Testing/ConsoleApplication/obj
+/Testing/Demo.Clouds/obj
+/Testing/Demo.Docking/obj
+/Testing/Demo.StreetView/obj
+/Testing/Silverlight/SilverlightMapFusion.Web/bin
+/Testing/Silverlight/SilverlightMapFusion.Web/obj
+/Testing/TemplatedBinding/obj
+/Tools/MapCruncher/obj

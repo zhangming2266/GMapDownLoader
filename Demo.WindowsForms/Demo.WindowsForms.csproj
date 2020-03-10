@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2E07A76-8B2C-41A2-B23E-EA31AE94D706}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo.WindowsForms</RootNamespace>
+    <AssemblyName>Demo.WindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\ImageReady.ico</ApplicationIcon>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>True</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;MONO_disabled; SQLite</DefineConstants>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\Build\Debug\Demo.WindowsForms.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\Build\Release-NET$(TargetFrameworkVersion)\</OutputPath>
+    <DefineConstants>TRACE;MONO_disabled; SQLite</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\Build\Release\Demo.WindowsForms.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">
+    <TargetFrameworkVersionNumber>2.0</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">
+    <TargetFrameworkVersionNumber>3.0</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">
+    <TargetFrameworkVersionNumber>3.5</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
+    <TargetFrameworkVersionNumber>4.0</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">
+    <TargetFrameworkVersionNumber>4.5</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.5.1' ">
+    <TargetFrameworkVersionNumber>4.51</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v5.0' ">
+    <TargetFrameworkVersionNumber>5.0</TargetFrameworkVersionNumber>
+  </PropertyGroup>
+  <Choose>
+    <When Condition=" '$(TargetFrameworkVersionNumber)' &gt;= '4.0' ">
+      <ItemGroup>
+        <Reference Include="Mono.Data.Sqlite">
+          <HintPath>..\References\Windows\NET4\Mono.Data.Sqlite.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite">
+          <HintPath>..\References\Windows\NET4\System.Data.SQLite.DLL</HintPath>
+          <SpecificVersion>False</SpecificVersion>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Mono.Data.Sqlite">
+          <HintPath>..\References\Windows\Mono.Data.Sqlite.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite">
+          <HintPath>..\References\Windows\System.Data.SQLite.DLL</HintPath>
+          <SpecificVersion>False</SpecificVersion>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GMap.NET.Core\Properties\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\ProgressBar\ProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\ProgressBar\ProgressBar.Designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\ProgressBar\ToolStripProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\Renderer\BseColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\BseRenderer.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\ColorTableBlack.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\ColorTableBlue.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\Office2007BlackColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\Office2007BlueColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\Office2007Renderer.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\Office2007SilverColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\OfficeColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Renderer\ProfessionalColorTable.cs" />
+    <Compile Include="BSE.Windows.Forms\Splitter\Splitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\Splitter\Splitter.Designer.cs">
+      <DependentUpon>Splitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\BasePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\CaptionStyle.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\ColorScheme.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\ColorSchemeChangeEventArgs.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\Constants.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\CustomColors.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\CustomPanelColors.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\CustomXPanderPanelColors.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\HoverState.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\HoverStateChangeEventArgs.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\IPanel.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\Panel.Designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColors.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsBlack.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsBlue.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsBse.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsOffice.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsOffice2007Black.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsOffice2007Blue.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelColorsOffice2007Silver.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelSettingsManager.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelStyle.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\PanelStyleChangeEventArgs.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\UseAntiAlias.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\UseClearTypeGridFit.cs" />
+    <Compile Include="BSE.Windows.Forms\XPander\XPanderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\XPanderPanel.Designer.cs">
+      <DependentUpon>XPanderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\XPanderPanelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\XPanderPanelList.Designer.cs">
+      <DependentUpon>XPanderPanelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSE.Windows.Forms\XPander\XPanderStateChangeEventArgs.cs" />
+    <Compile Include="CustomMarkers\GMarkerArrow.cs" />
+    <Compile Include="CustomMarkers\GMapMarkerCircle.cs" />
+    <Compile Include="EvilTransform.cs" />
+    <Compile Include="Forms\Choosebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Choosebox.Designer.cs">
+      <DependentUpon>Choosebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMarkers\GMapMarkerRect.cs" />
+    <Compile Include="Forms\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StaticImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StaticImage.Designer.cs">
+      <DependentUpon>StaticImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\DemoStuff.cs" />
+    <Compile Include="Source\IniHelper.cs" />
+    <Compile Include="Source\Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\SQLiteIpCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BSE.Windows.Forms\XPander\Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSE.Windows.Forms\XPander\XPanderPanel.resx">
+      <DependentUpon>XPanderPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSE.Windows.Forms\XPander\XPanderPanelList.resx">
+      <DependentUpon>XPanderPanelList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Choosebox.resx">
+      <DependentUpon>Choosebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StaticImage.resx">
+      <DependentUpon>StaticImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\layers.png">
+      <Link>leafletjs\dist\images\layers.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\locate.png">
+      <Link>leafletjs\dist\images\locate.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\locate.svg">
+      <Link>leafletjs\dist\images\locate.svg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\locate_active.png">
+      <Link>leafletjs\dist\images\locate_active.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\marker-icon%402x.png">
+      <Link>leafletjs\dist\images\marker-icon%402x.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\marker-icon.png">
+      <Link>leafletjs\dist\images\marker-icon.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\marker-shadow.png">
+      <Link>leafletjs\dist\images\marker-shadow.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\images\spinner.gif">
+      <Link>leafletjs\dist\images\spinner.gif</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\leaflet-ie.css">
+      <Link>leafletjs\dist\leaflet-ie.css</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\leaflet.css">
+      <Link>leafletjs\dist\leaflet.css</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\leaflet.js">
+      <Link>leafletjs\dist\leaflet.js</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\locate-ie.css">
+      <Link>leafletjs\dist\locate-ie.css</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\locate.css">
+      <Link>leafletjs\dist\locate.css</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\locate.js">
+      <Link>leafletjs\dist\locate.js</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\mobile.css">
+      <Link>leafletjs\dist\mobile.css</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\proj4js-compressed.js">
+      <Link>leafletjs\dist\proj4js-compressed.js</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\References\Web\LeafletJS\proj4leaflet.js">
+      <Link>leafletjs\dist\proj4leaflet.js</Link>
+    </EmbeddedResource>
+    <Content Include="BSE.Windows.Forms\Resources\ChevronDown.png" />
+    <Content Include="BSE.Windows.Forms\Resources\ChevronLeft.png" />
+    <Content Include="BSE.Windows.Forms\Resources\ChevronRight.png" />
+    <Content Include="BSE.Windows.Forms\Resources\ChevronUp.png" />
+    <Content Include="BSE.Windows.Forms\Resources\closePanel.png" />
+    <Content Include="BSE.Windows.Forms\Resources\Collapse.jpg" />
+    <Content Include="BSE.Windows.Forms\Resources\Collapse_h.jpg" />
+    <Content Include="BSE.Windows.Forms\Resources\Expand.jpg" />
+    <Content Include="BSE.Windows.Forms\Resources\Expand_h.jpg" />
+    <EmbeddedResource Include="leafletjs\gmap.html" />
+    <Content Include="china\云南\临沧.txt" />
+    <Content Include="china\云南\丽江.txt" />
+    <Content Include="china\云南\保山.txt" />
+    <Content Include="china\云南\大理州.txt" />
+    <Content Include="china\云南\德宏州.txt" />
+    <Content Include="china\云南\怒江州.txt" />
+    <Content Include="china\云南\文山.txt" />
+    <Content Include="china\云南\昆明.txt" />
+    <Content Include="china\云南\昭通.txt" />
+    <Content Include="china\云南\普洱.txt" />
+    <Content Include="china\云南\曲靖.txt" />
+    <Content Include="china\云南\楚雄州.txt" />
+    <Content Include="china\云南\玉溪.txt" />
+    <Content Include="china\云南\红河州.txt" />
+    <Content Include="china\云南\西双版纳.txt" />
+    <Content Include="china\云南\迪庆州.txt" />
+    <Content Include="china\内蒙古\乌兰察布.txt" />
+    <Content Include="china\内蒙古\乌海.txt" />
+    <Content Include="china\内蒙古\兴安盟.txt" />
+    <Content Include="china\内蒙古\包头.txt" />
+    <Content Include="china\内蒙古\呼伦贝尔.txt" />
+    <Content Include="china\内蒙古\呼和浩特.txt" />
+    <Content Include="china\内蒙古\巴彦淖尔.txt" />
+    <Content Include="china\内蒙古\赤峰.txt" />
+    <Content Include="china\内蒙古\通辽.txt" />
+    <Content Include="china\内蒙古\鄂尔多斯.txt" />
+    <Content Include="china\内蒙古\锡林郭勒盟.txt" />
+    <Content Include="china\内蒙古\阿拉善盟.txt" />
+    <Content Include="china\吉林\吉林市.txt" />
+    <Content Include="china\吉林\四平.txt" />
+    <Content Include="china\吉林\延边.txt" />
+    <Content Include="china\吉林\松原.txt" />
+    <Content Include="china\吉林\白城.txt" />
+    <Content Include="china\吉林\白山.txt" />
+    <Content Include="china\吉林\辽源.txt" />
+    <Content Include="china\吉林\通化.txt" />
+    <Content Include="china\吉林\长春.txt" />
+    <Content Include="china\四川\乐山.txt" />
+    <Content Include="china\四川\内江.txt" />
+    <Content Include="china\四川\凉山州.txt" />
+    <Content Include="china\四川\南充.txt" />
+    <Content Include="china\四川\宜宾.txt" />
+    <Content Include="china\四川\巴中.txt" />
+    <Content Include="china\四川\广元.txt" />
+    <Content Include="china\四川\广安.txt" />
+    <Content Include="china\四川\德阳.txt" />
+    <Content Include="china\四川\成都.txt" />
+    <Content Include="china\四川\攀枝花.txt" />
+    <Content Include="china\四川\泸州.txt" />
+    <Content Include="china\四川\甘孜州.txt" />
+    <Content Include="china\四川\眉山.txt" />
+    <Content Include="china\四川\绵阳.txt" />
+    <Content Include="china\四川\自贡.txt" />
+    <Content Include="china\四川\资阳.txt" />
+    <Content Include="china\四川\达州.txt" />
+    <Content Include="china\四川\遂宁.txt" />
+    <Content Include="china\四川\阿坝州.txt" />
+    <Content Include="china\四川\雅安.txt" />
+    <Content Include="china\宁夏\中卫.txt" />
+    <Content Include="china\宁夏\吴忠.txt" />
+    <Content Include="china\宁夏\固原.txt" />
+    <Content Include="china\宁夏\石嘴山.txt" />
+    <Content Include="china\宁夏\银川.txt" />
+    <Content Include="china\安徽\亳州.txt" />
+    <Content Include="china\安徽\六安.txt" />
+    <Content Include="china\安徽\合肥.txt" />
+    <Content Include="china\安徽\安庆.txt" />
+    <Content Include="china\安徽\宣城.txt" />
+    <Content Include="china\安徽\宿州.txt" />
+    <Content Include="china\安徽\巢湖.txt" />
+    <Content Include="china\安徽\池州.txt" />
+    <Content Include="china\安徽\淮北.txt" />
+    <Content Include="china\安徽\淮南.txt" />
+    <Content Include="china\安徽\滁州.txt" />
+    <Content Include="china\安徽\芜湖.txt" />
+    <Content Include="china\安徽\蚌埠.txt" />
+    <Content Include="china\安徽\阜阳.txt" />
+    <Content Include="china\安徽\马鞍山.txt" />
+    <Content Include="china\安徽\黄山.txt" />
+    <Content Include="china\山东\东营.txt" />
+    <Content Include="china\山东\临沂.txt" />
+    <Content Include="china\山东\威海.txt" />
+    <Content Include="china\山东\德州.txt" />
+    <Content Include="china\山东\日照.txt" />
+    <Content Include="china\山东\枣庄.txt" />
+    <Content Include="china\山东\泰安.txt" />
+    <Content Include="china\山东\济南.txt" />
+    <Content Include="china\山东\济宁.txt" />
+    <Content Include="china\山东\淄博.txt" />
+    <Content Include="china\山东\滨州.txt" />
+    <Content Include="china\山东\潍坊.txt" />
+    <Content Include="china\山东\烟台.txt" />
+    <Content Include="china\山东\聊城.txt" />
+    <Content Include="china\山东\莱芜.txt" />
+    <Content Include="china\山东\菏泽.txt" />
+    <Content Include="china\山东\青岛.txt" />
+    <Content Include="china\山西\临汾.txt" />
+    <Content Include="china\山西\吕梁.txt" />
+    <Content Include="china\山西\大同.txt" />
+    <Content Include="china\山西\太原.txt" />
+    <Content Include="china\山西\忻州.txt" />
+    <Content Include="china\山西\晋中.txt" />
+    <Content Include="china\山西\晋城.txt" />
+    <Content Include="china\山西\朔州.txt" />
+    <Content Include="china\山西\运城.txt" />
+    <Content Include="china\山西\长治.txt" />
+    <Content Include="china\山西\阳泉.txt" />
+    <Content Include="china\广东\东莞.txt" />
+    <Content Include="china\广东\中山.txt" />
+    <Content Include="china\广东\云浮.txt" />
+    <Content Include="china\广东\佛山.txt" />
+    <Content Include="china\广东\广州.txt" />
+    <Content Include="china\广东\惠州.txt" />
+    <Content Include="china\广东\揭阳.txt" />
+    <Content Include="china\广东\梅州.txt" />
+    <Content Include="china\广东\汕头.txt" />
+    <Content Include="china\广东\汕尾.txt" />
+    <Content Include="china\广东\江门.txt" />
+    <Content Include="china\广东\河源.txt" />
+    <Content Include="china\广东\深圳.txt" />
+    <Content Include="china\广东\清远.txt" />
+    <Content Include="china\广东\湛江.txt" />
+    <Content Include="china\广东\潮州.txt" />
+    <Content Include="china\广东\珠海.txt" />
+    <Content Include="china\广东\肇庆.txt" />
+    <Content Include="china\广东\茂名.txt" />
+    <Content Include="china\广东\阳江.txt" />
+    <Content Include="china\广东\韶关.txt" />
+    <Content Include="china\广西\北海.txt" />
+    <Content Include="china\广西\南宁.txt" />
+    <Content Include="china\广西\崇左.txt" />
+    <Content Include="china\广西\来宾.txt" />
+    <Content Include="china\广西\柳州.txt" />
+    <Content Include="china\广西\桂林.txt" />
+    <Content Include="china\广西\梧州.txt" />
+    <Content Include="china\广西\河池.txt" />
+    <Content Include="china\广西\玉林.txt" />
+    <Content Include="china\广西\百色.txt" />
+    <Content Include="china\广西\贵港.txt" />
+    <Content Include="china\广西\贺州.txt" />
+    <Content Include="china\广西\钦州.txt" />
+    <Content Include="china\广西\防城港.txt" />
+    <Content Include="china\新疆\乌鲁木齐.txt" />
+    <Content Include="china\新疆\五家渠.txt" />
+    <Content Include="china\新疆\伊犁州.txt" />
+    <Content Include="china\新疆\克孜勒苏州.txt" />
+    <Content Include="china\新疆\克拉玛依.txt" />
+    <Content Include="china\新疆\博尔塔拉州.txt" />
+    <Content Include="china\新疆\吐鲁番地区.txt" />
+    <Content Include="china\新疆\和田地区.txt" />
+    <Content Include="china\新疆\哈密地区.txt" />
+    <Content Include="china\新疆\喀什地区.txt" />
+    <Content Include="china\新疆\图木舒克.txt" />
+    <Content Include="china\新疆\塔城地区.txt" />
+    <Content Include="china\新疆\巴音郭楞.txt" />
+    <Content Include="china\新疆\昌吉州.txt" />
+    <Content Include="china\新疆\石河子.txt" />
+    <Content Include="china\新疆\阿克苏地区.txt" />
+    <Content Include="china\新疆\阿勒泰地区.txt" />
+    <Content Include="china\新疆\阿拉尔.txt" />
+    <Content Include="china\江苏\南京.txt" />
+    <Content Include="china\江苏\南通.txt" />
+    <Content Include="china\江苏\宿迁.txt" />
+    <Content Include="china\江苏\常州.txt" />
+    <Content Include="china\江苏\徐州.txt" />
+    <Content Include="china\江苏\扬州.txt" />
+    <Content Include="china\江苏\无锡.txt" />
+    <Content Include="china\江苏\泰州.txt" />
+    <Content Include="china\江苏\淮安.txt" />
+    <Content Include="china\江苏\苏州.txt" />
+    <Content Include="china\江苏\连云港.txt" />
+    <Content Include="china\江苏\镇江.txt" />
+    <Content Include="china\江西\上饶.txt" />
+    <Content Include="china\江西\九江.txt" />
+    <Content Include="china\江西\南昌.txt" />
+    <Content Include="china\江西\吉安.txt" />
+    <Content Include="china\江西\宜春.txt" />
+    <Content Include="china\江西\抚州.txt" />
+    <Content Include="china\江西\新余.txt" />
+    <Content Include="china\江西\景德镇.txt" />
+    <Content Include="china\江西\萍乡.txt" />
+    <Content Include="china\江西\赣州.txt" />
+    <Content Include="china\江西\鹰潭.txt" />
+    <Content Include="china\河北\保定.txt" />
+    <Content Include="china\河北\唐山.txt" />
+    <Content Include="china\河北\廊坊.txt" />
+    <Content Include="china\河北\张家口.txt" />
+    <Content Include="china\河北\承德.txt" />
+    <Content Include="china\河北\沧州.txt" />
+    <Content Include="china\河北\石家庄.txt" />
+    <Content Include="china\河北\秦皇岛.txt" />
+    <Content Include="china\河北\衡水.txt" />
+    <Content Include="china\河北\邢台.txt" />
+    <Content Include="china\河北\邯郸.txt" />
+    <Content Include="china\河南\三门峡.txt" />
+    <Content Include="china\河南\信阳.txt" />
+    <Content Include="china\河南\南阳.txt" />
+    <Content Include="china\河南\周口.txt" />
+    <Content Include="china\河南\商丘.txt" />
+    <Content Include="china\河南\安阳.txt" />
+    <Content Include="china\河南\平顶山.txt" />
+    <Content Include="china\河南\开封.txt" />
+    <Content Include="china\河南\新乡.txt" />
+    <Content Include="china\河南\洛阳.txt" />
+    <Content Include="china\河南\漯河.txt" />
+    <Content Include="china\河南\濮阳.txt" />
+    <Content Include="china\河南\焦作.txt" />
+    <Content Include="china\河南\许昌.txt" />
+    <Content Include="china\河南\郑州.txt" />
+    <Content Include="china\河南\驻马店.txt" />
+    <Content Include="china\河南\鹤壁.txt" />
+    <Content Include="china\浙江\丽水.txt" />
+    <Content Include="china\浙江\台州.txt" />
+    <Content Include="china\浙江\嘉兴.txt" />
+    <Content Include="china\浙江\宁波.txt" />
+    <Content Include="china\浙江\杭州.txt" />
+    <Content Include="china\浙江\温州.txt" />
+    <Content Include="china\浙江\湖州.txt" />
+    <Content Include="china\浙江\绍兴.txt" />
+    <Content Include="china\浙江\舟山.txt" />
+    <Content Include="china\浙江\衢州.txt" />
+    <Content Include="china\浙江\金华.txt" />
+    <Content Include="china\海南\万宁.txt" />
+    <Content Include="china\海南\三亚.txt" />
+    <Content Include="china\海南\东方.txt" />
+    <Content Include="china\海南\临高.txt" />
+    <Content Include="china\海南\乐东.txt" />
+    <Content Include="china\海南\五指山.txt" />
+    <Content Include="china\海南\保亭.txt" />
+    <Content Include="china\海南\儋州.txt" />
+    <Content Include="china\海南\定安.txt" />
+    <Content Include="china\海南\屯昌.txt" />
+    <Content Include="china\海南\文昌.txt" />
+    <Content Include="china\海南\昌江.txt" />
+    <Content Include="china\海南\海口.txt" />
+    <Content Include="china\海南\澄迈.txt" />
+    <Content Include="china\海南\琼中.txt" />
+    <Content Include="china\海南\琼海.txt" />
+    <Content Include="china\海南\白沙.txt" />
+    <Content Include="china\海南\陵水.txt" />
+    <Content Include="china\湖北\仙桃.txt" />
+    <Content Include="china\湖北\十堰.txt" />
+    <Content Include="china\湖北\咸宁.txt" />
+    <Content Include="china\湖北\天门.txt" />
+    <Content Include="china\湖北\孝感.txt" />
+    <Content Include="china\湖北\宜昌.txt" />
+    <Content Include="china\湖北\恩施.txt" />
+    <Content Include="china\湖北\武汉.txt" />
+    <Content Include="china\湖北\潜江.txt" />
+    <Content Include="china\湖北\神农架林区.txt" />
+    <Content Include="china\湖北\荆州.txt" />
+    <Content Include="china\湖北\荆门.txt" />
+    <Content Include="china\湖北\襄樊.txt" />
+    <Content Include="china\湖北\鄂州.txt" />
+    <Content Include="china\湖北\随州.txt" />
+    <Content Include="china\湖北\黄冈.txt" />
+    <Content Include="china\湖北\黄石.txt" />
+    <Content Include="china\湖南\娄底.txt" />
+    <Content Include="china\湖南\岳阳.txt" />
+    <Content Include="china\湖南\常德.txt" />
+    <Content Include="china\湖南\张家界.txt" />
+    <Content Include="china\湖南\怀化.txt" />
+    <Content Include="china\湖南\株洲.txt" />
+    <Content Include="china\湖南\永州.txt" />
+    <Content Include="china\湖南\湘潭.txt" />
+    <Content Include="china\湖南\湘西州.txt" />
+    <Content Include="china\湖南\益阳.txt" />
+    <Content Include="china\湖南\衡阳.txt" />
+    <Content Include="china\湖南\邵阳.txt" />
+    <Content Include="china\湖南\郴州.txt" />
+    <Content Include="china\湖南\长沙.txt" />
+    <Content Include="china\甘肃\临夏州.txt" />
+    <Content Include="china\甘肃\兰州.txt" />
+    <Content Include="china\甘肃\嘉峪关.txt" />
+    <Content Include="china\甘肃\天水.txt" />
+    <Content Include="china\甘肃\定西.txt" />
+    <Content Include="china\甘肃\平凉.txt" />
+    <Content Include="china\甘肃\庆阳.txt" />
+    <Content Include="china\甘肃\张掖.txt" />
+    <Content Include="china\甘肃\武威.txt" />
+    <Content Include="china\甘肃\甘南州.txt" />
+    <Content Include="china\甘肃\白银.txt" />
+    <Content Include="china\甘肃\酒泉.txt" />
+    <Content Include="china\甘肃\金昌.txt" />
+    <Content Include="china\甘肃\陇南.txt" />
+    <Content Include="china\省\上海.txt" />
+    <Content Include="china\省\云南.txt" />
+    <Content Include="china\省\内蒙古.txt" />
+    <Content Include="china\省\北京.txt" />
+    <Content Include="china\省\台湾.txt" />
+    <Content Include="china\省\吉林.txt" />
+    <Content Include="china\省\四川.txt" />
+    <Content Include="china\省\天津.txt" />
+    <Content Include="china\省\宁夏.txt" />
+    <Content Include="china\省\安徽.txt" />
+    <Content Include="china\省\山东.txt" />
+    <Content Include="china\省\山西.txt" />
+    <Content Include="china\省\广东.txt" />
+    <Content Include="china\省\广西.txt" />
+    <Content Include="china\省\新疆.txt" />
+    <Content Include="china\省\江苏.txt" />
+    <Content Include="china\省\江西.txt" />
+    <Content Include="china\省\河北.txt" />
+    <Content Include="china\省\河南.txt" />
+    <Content Include="china\省\浙江.txt" />
+    <Content Include="china\省\海南.txt" />
+    <Content Include="china\省\湖北.txt" />
+    <Content Include="china\省\湖南.txt" />
+    <Content Include="china\省\澳门.txt" />
+    <Content Include="china\省\甘肃.txt" />
+    <Content Include="china\省\福建.txt" />
+    <Content Include="china\省\西藏.txt" />
+    <Content Include="china\省\贵州.txt" />
+    <Content Include="china\省\辽宁.txt" />
+    <Content Include="china\省\重庆.txt" />
+    <Content Include="china\省\陕西.txt" />
+    <Content Include="china\省\青海.txt" />
+    <Content Include="china\省\香港.txt" />
+    <Content Include="china\省\黑龙江.txt" />
+    <Content Include="china\福建\三明.txt" />
+    <Content Include="china\福建\南平.txt" />
+    <Content Include="china\福建\厦门.txt" />
+    <Content Include="china\福建\宁德.txt" />
+    <Content Include="china\福建\泉州.txt" />
+    <Content Include="china\福建\漳州.txt" />
+    <Content Include="china\福建\福州.txt" />
+    <Content Include="china\福建\莆田.txt" />
+    <Content Include="china\福建\龙岩.txt" />
+    <Content Include="china\西藏\山南地区.txt" />
+    <Content Include="china\西藏\拉萨.txt" />
+    <Content Include="china\西藏\日喀则地区.txt" />
+    <Content Include="china\西藏\昌都地区.txt" />
+    <Content Include="china\西藏\林芝地区.txt" />
+    <Content Include="china\西藏\那曲地区.txt" />
+    <Content Include="china\西藏\阿里地区.txt" />
+    <Content Include="china\贵州\六盘水.txt" />
+    <Content Include="china\贵州\安顺.txt" />
+    <Content Include="china\贵州\毕节地区.txt" />
+    <Content Include="china\贵州\贵阳.txt" />
+    <Content Include="china\贵州\遵义.txt" />
+    <Content Include="china\贵州\铜仁地区.txt" />
+    <Content Include="china\贵州\黔东南州.txt" />
+    <Content Include="china\贵州\黔南州.txt" />
+    <Content Include="china\贵州\黔西南州.txt" />
+    <Content Include="china\辽宁\丹东.txt" />
+    <Content Include="china\辽宁\大连.txt" />
+    <Content Include="china\辽宁\抚顺.txt" />
+    <Content Include="china\辽宁\朝阳.txt" />
+    <Content Include="china\辽宁\本溪.txt" />
+    <Content Include="china\辽宁\沈阳.txt" />
+    <Content Include="china\辽宁\盘锦.txt" />
+    <Content Include="china\辽宁\营口.txt" />
+    <Content Include="china\辽宁\葫芦岛.txt" />
+    <Content Include="china\辽宁\辽阳.txt" />
+    <Content Include="china\辽宁\铁岭.txt" />
+    <Content Include="china\辽宁\锦州.txt" />
+    <Content Include="china\辽宁\阜新.txt" />
+    <Content Include="china\辽宁\鞍山.txt" />
+    <Content Include="china\陕西\咸阳.txt" />
+    <Content Include="china\陕西\商洛.txt" />
+    <Content Include="china\陕西\安康.txt" />
+    <Content Include="china\陕西\宝鸡.txt" />
+    <Content Include="china\陕西\延安.txt" />
+    <Content Include="china\陕西\榆林.txt" />
+    <Content Include="china\陕西\汉中.txt" />
+    <Content Include="china\陕西\渭南.txt" />
+    <Content Include="china\陕西\西安.txt" />
+    <Content Include="china\陕西\铜川.txt" />
+    <Content Include="china\青海\果洛州.txt" />
+    <Content Include="china\青海\海东地区.txt" />
+    <Content Include="china\青海\海北州.txt" />
+    <Content Include="china\青海\海南州.txt" />
+    <Content Include="china\青海\海西州.txt" />
+    <Content Include="china\青海\玉树州.txt" />
+    <Content Include="china\青海\西宁.txt" />
+    <Content Include="china\青海\黄南州.txt" />
+    <Content Include="china\黑龙江\七台河.txt" />
+    <Content Include="china\黑龙江\伊春.txt" />
+    <Content Include="china\黑龙江\佳木斯.txt" />
+    <Content Include="china\黑龙江\双鸭山.txt" />
+    <Content Include="china\黑龙江\哈尔滨.txt" />
+    <Content Include="china\黑龙江\大兴安岭地区.txt" />
+    <Content Include="china\黑龙江\大庆.txt" />
+    <Content Include="china\黑龙江\牡丹江.txt" />
+    <Content Include="china\黑龙江\绥化.txt" />
+    <Content Include="china\黑龙江\鸡西.txt" />
+    <Content Include="china\黑龙江\鹤岗.txt" />
+    <Content Include="china\黑龙江\黑河.txt" />
+    <Content Include="china\黑龙江\齐齐哈尔.txt" />
+    <Content Include="Resources\ImageReady.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMap.NET.Core\GMap.NET.Core.csproj">
+      <Project>{D0C39D9D-BED0-418B-9A5E-713176CAF40C}</Project>
+      <Name>GMap.NET.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj">
+      <Project>{E06DEF77-F933-42FB-AFD7-DB2D0D8D6A98}</Project>
+      <Name>GMap.NET.WindowsForms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="sn.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
