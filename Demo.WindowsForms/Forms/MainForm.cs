@@ -2288,6 +2288,7 @@ namespace Demo.WindowsForms
                     if (!area.IsEmpty)
                     {
                         iniHelper.IniWriteValue("地图配置", "bounds", area.Left.ToString() + "," + area.Top.ToString() + "," + area.Right.ToString() + "," + area.Bottom.ToString());
+                        iniHelper.IniWriteValue("地图配置", "center", area.LocationMiddle.Lng.ToString() + "," + area.LocationMiddle.Lat.ToString());
                     }
                     else
                     {
@@ -2302,6 +2303,7 @@ namespace Demo.WindowsForms
                         myGraphicsPath.AddPolygon(points);
                         var rectBound = myGraphicsPath.GetBounds();
                         iniHelper.IniWriteValue("地图配置", "bounds", rectBound.Left.ToString() + "," + rectBound.Top.ToString() + "," + rectBound.Right.ToString() + "," + rectBound.Bottom.ToString());
+                        iniHelper.IniWriteValue("地图配置", "center", (rectBound.Top + rectBound.Height / 2).ToString() + "," + (rectBound.Left + rectBound.Width/2).ToString());
                     }
 
                 }
